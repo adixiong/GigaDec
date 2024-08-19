@@ -1,0 +1,50 @@
+{% extends "../layouts/base.html" %} 
+{% load static %}
+{% block content %}
+  <section class=" mb-6">
+      <!-- Header Section -->
+      <header class="p-10 flex gap-5 bg-dark-blue justify-around items-center sm:mb-7 mb-4">
+
+          <!-- USAD Logo -->
+          <img src="{% static 'images/image1.avif' %}"
+              class="xl:max-h-[24rem] lg:max-h-[18rem] md:max-h-[13rem] sm:max-h-[10rem] max-h-[4rem]  rounded-[30%]"
+              alt="USAD">
+
+          <!-- Contents -->
+          <div class="text-center font-bold">
+
+              <!-- Title -->
+              <h1 class="lg:text-4xl md:text-2xl text-lg  text-white  font-libre">Mobile Downloads</h1>
+
+              <!-- CTO -->
+              <a
+                  class="bg-white inline-block text-dark-navy-blue mt-4 font-semibold md:text-base py-2 text-sm md:px-10 px-4 rounded-full hover:bg-gray-100 ">
+                  <span class="sm:block hidden">TRY WEB VERSION FIRST</span>
+                  <span class="sm:hidden">TRY WEB</span>
+              </a>
+          </div>
+
+          <!-- GigaDec Logo -->
+          <img src="{% static 'images/logo_2.avif' %}"
+              class="xl:max-h-[24rem] lg:max-h-[18rem] md:max-h-[13rem] sm:max-h-[10rem] max-h-[4rem]  rounded-[30%]"
+              alt="USAD">
+      </header>
+      <!-- Header Section end-->
+
+      <!-- CTO -->
+      <div class="flex justify-center sm:space-x-6 space-x-4">
+
+          <!-- Apple store -->
+          <a href="" class="">
+              <img src="{% static 'images/store-logos/apple-1.png' %}" alt="apple store" class="sm:max-h-16 max-h-10">
+          </a>
+          <!-- Play store -->
+          <a href="" class="">
+              <img src="{% static 'images/store-logos/playstore.png' %}" alt="apple store" class="sm:max-h-16 max-h-10">
+          </a>
+
+      </div>
+
+  </section>
+
+{% endblock %}

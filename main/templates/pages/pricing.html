@@ -1,0 +1,181 @@
+{% extends "../layouts/base.html" %} 
+{% load static %}
+{% block content %}
+<section class="mb-6 bg-gray-100">
+  <!-- Header Section -->
+  <header
+    class="p-10 flex gap-5 bg-dark-blue justify-around items-center sm:mb-7 mb-4"
+  >
+    <!-- USAD Logo -->
+    <img
+      src="{% static 'images/image1.avif' %}"
+      class="xl:max-h-[24rem] lg:max-h-[18rem] md:max-h-[13rem] sm:max-h-[10rem] max-h-[4rem] rounded-[30%]"
+      alt="USAD"
+    />
+
+    <!-- Contents -->
+    <div class="text-center font-bold">
+      <!-- Title -->
+      <h1 class="lg:text-4xl md:text-2xl text-lg text-white font-libre">
+        Pricing
+      </h1>
+
+      <!-- CTO -->
+      <a
+        class="bg-white inline-block text-dark-navy-blue mt-4 font-semibold md:text-base py-2 text-sm md:px-10 px-4 rounded-full hover:bg-gray-100"
+      >
+        <span class="sm:block hidden">TRY WEB VERSION FIRST</span>
+        <span class="sm:hidden">TRY WEB</span>
+      </a>
+    </div>
+
+    <!-- GigaDec Logo -->
+    <img
+      src="{% static 'images/logo_2.avif' %}"
+      class="xl:max-h-[24rem] lg:max-h-[18rem] md:max-h-[13rem] sm:max-h-[10rem] max-h-[4rem] rounded-[30%]"
+      alt="USAD"
+    />
+  </header>
+  <!-- Header Section end-->
+
+  <!-- Pricing Cards -->
+  <div class="flex flex-wrap gap-8 justify-center px-4 pb-16 pt-5 shadow-xl">
+    <!-- Basic Plan -->
+    <div class="max-w-80 bg-white rounded-xl shadow-sm p-6">
+      <!-- Title -->
+      <h2 class="text-2xl mb-2 font-bold text-gray-700">Basic</h2>
+      <p class="text-gray-700">Free Version via Web Client</p>
+
+      <!-- Price -->
+      <p class="mt-6 mb-2 text-4xl font-bold text-gray-700">$0</p>
+
+      <!-- Time -->
+      <p class="text-gray-700">per month</p>
+
+      <!-- CTO btn -->
+      <button
+        class="mt-6 w-full bg-navy-blue text-white py-3.5 rounded-lg hover:bg-navy-blue/90 font-[650]"
+      >
+        SELECT
+      </button>
+
+      <!-- Features -->
+      <div class="mt-6">
+        <p class="font-bold text-lg text-gray-700">Features</p>
+        <ul class="mt-4 space-y-3.5">
+          <li class="flex items-center">
+            <i class="material-icons mr-2 text-green-500">check_box </i>
+
+            <span>Prepare for Art, Music, Econ, and Science</span>
+          </li>
+          <li class="flex items-center">
+            <i class="material-icons mr-2 text-green-500">check_box </i>
+
+            <span>Limited Access to Speech Grader and Debate Grader</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="max-w-80 bg-white rounded-xl shadow-sm p-6">
+      <!-- Title -->
+      <h2 class="text-2xl mb-2 font-bold text-gray-700">Premium</h2>
+      <p class="text-gray-700">For Individual Competitors</p>
+
+      <!-- Price -->
+      <p class="mt-6 mb-2 text-4xl font-bold text-gray-700">$150</p>
+
+      <!-- Time -->
+      <p class="text-gray-700">per member, semester</p>
+
+      <!-- CTO btn -->
+      <button
+        class="mt-6 w-full bg-navy-blue text-white py-3.5 rounded-lg hover:bg-navy-blue/90 font-[650]"
+      >
+        SELECT
+      </button>
+
+      <!-- Features -->
+      <div class="mt-6">
+        <p class="font-bold text-lg text-gray-700">Features</p>
+        <ul class="mt-4 space-y-3.5">
+          <li class="flex items-center">
+            <i class="material-icons mr-2 text-green-500">check_box </i>
+
+            <span>Prepare for all 10 Subjects</span>
+          </li>
+          <li class="flex items-center">
+            <i class="material-icons mr-2 text-green-500">check_box </i>
+
+            <span>Unlimited Access to Speech Grader and Debate Grader</span>
+          </li>
+          <li class="flex items-center">
+            <i class="material-icons mr-2 text-green-500">check_box </i>
+
+            <span>Impromptu Simulator (Beta)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Team Access Plan -->
+    <div class="max-w-80 relative pt-5 lg:pt-0">
+      <div class="bg-white rounded-xl shadow-sm p-6 relative">
+        <!-- Tag -->
+        <header
+          class="bg-white text-center p-2 rounded-md w-9/12 left-10 absolute -top-6 shadow-t-sm"
+        >
+          <p class="text-gray-700 text-sm font-semibold tracking-wide">
+            BEST VALUE
+          </p>
+        </header>
+
+        <!-- Title -->
+        <h2 class="text-2xl mb-2 font-bold text-gray-700">Team Access</h2>
+        <p class="text-gray-700">For Full AcaDec Teams</p>
+
+        <!-- Price -->
+        <p class="mt-6 mb-2 text-4xl font-bold text-gray-700">$900</p>
+
+        <!-- Time -->
+        <p class="text-gray-700">per team, per semester</p>
+
+        <!-- CTO btn -->
+        <button
+          class="mt-6 w-full bg-navy-blue text-white py-3.5 rounded-lg hover:bg-navy-blue/90 font-[650]"
+        >
+          SELECT
+        </button>
+
+        <!-- Features -->
+        <div class="mt-6">
+          <p class="font-bold text-lg text-gray-700">Features</p>
+          <ul class="mt-4 space-y-3.5">
+            <li class="flex items-center">
+              <i class="material-icons mr-2 text-green-500">check_box </i>
+              <span
+                >9 Accounts Total (3 Honors, 3 Scholastics, 3 Varsities)</span
+              >
+            </li>
+            <li class="flex items-center">
+              <i class="material-icons mr-2 text-green-500">check_box </i>
+              <span
+                >Metrics to estimate team score, tracking improvement over
+                time</span
+              >
+            </li>
+            <li class="flex items-center">
+              <i class="material-icons mr-2 text-green-500">check_box </i>
+              <span
+                >Assistance tailored to each team member's competition
+                class</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

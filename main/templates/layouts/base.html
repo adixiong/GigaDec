@@ -1,0 +1,96 @@
+{% load static %}
+{% load menu_tags %}
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gigadec</title>
+    <link rel="shortcut icon" href="{% static 'images/landing_logo.avif' %}" type="image/x-icon">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="{% static 'tailwind.config.js' %}"></script>
+
+    <!-- Jquery -->
+    <script defer src="{% static 'vendors/jquery.js' %}"></script>
+
+    <!-- JS -->
+    <script defer src="{% static 'js/navbar.js' %}"></script>
+
+</head>
+<body class="p-0">
+    <!-- Navbar -->
+    <nav class="bg-white sticky top-0 z-[9999999999]">
+        <div class=" border-b border-gray-400 px-4" id="horizontal-menu">
+          {% get_menu as menu_items %}
+            <ul class="hidden sm:flex justify-center md:space-x-3 space-x-0 text-gray-500 text-sm font-semibold">
+                {% for item in menu_items %}
+                    <li class="py-6 px-3 transition-all duration-100
+                        {% if item.slug == active_menu %}
+                            border-b-2 border-navy-blue text-navy-blue
+                        {% endif %}">
+                        <a href="{{ item.url }}" class="flex items-center">
+                            <i class="material-icons mr-1.5 text-[1.25rem]">
+                                {{ item.icon }}
+                            </i>
+                            {{ item.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <!-- Dropdown Button -->
+            <div class="py-3 px-3 sm:hidden flex justify-end">
+                <button id="open-menu-btn" class="text-lg hover:text-gray-600 transition-all duration-100">
+                    <i class="material-icons">menu</i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="py-10 min-h-screen px-[0.05rem] hidden" id="menu">
+            <!-- Close btn -->
+            <div class="mb-2">
+                <button class="hover:text-gray-600 transition-all duration-100 ms-auto me-5 block " id="close-menu-btn">
+                    <i class="material-icons text-[1.25rem]">close</i>
+                </button>
+            </div>
+            <!-- Links -->
+            <ul class=" space-y-3 text-gray-500 text-sm font-semibold">
+                {% for item in menu_items %}
+                    <li class="py-4 px-12 transition-all duration-100
+                        {% if item.slug == active_menu %}
+                            border-b-2 border-navy-blue text-navy-blue
+                        {% endif %}">
+                        <a href="{{ item.url }}" class="flex items-center">
+                            <i class="material-icons mr-1.5 text-[1.25rem]">
+                              {{ item.icon }}
+                            </i>
+                            {{ item.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </aside>
+    </nav>
+    <!-- Navbar Ends -->
+
+    <main class="bg-gray-100 min-h-screen 
+    {% if 'web-client' != active_menu %}
+        py-10 
+    {% endif %}
+    ">
+      {% block content %}{% endblock %}
+    </main>
+</body>
+
+</html>
